@@ -1,0 +1,16 @@
+{
+  "name": "petstore-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node ./generate"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "openapi-typescript-codegen": "^0.5.3"
+  },
+  "dependencies": {}
+}
