@@ -2,6 +2,7 @@
 
 const commonjs = require('@rollup/plugin-commonjs');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
+const copy = require('rollup-plugin-copy');
 const { terser } = require('rollup-plugin-terser');
 const typescript = require('rollup-plugin-typescript2');
 const handlebars = require('handlebars');
@@ -48,6 +49,7 @@ const getPlugins = () => {
         typescript(),
         nodeResolve(),
         commonjs(),
+        copy({ targets: [{ src: 'src/templates/', dest: 'dist' }] })
     ]
     if (process.env.NODE_ENV === 'development') {
         return plugins;
