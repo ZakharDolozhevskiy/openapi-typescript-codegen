@@ -27,7 +27,7 @@ export interface Templates {
  */
 export function registerHandlebarTemplates(customTemplates?: string): Templates {
     const templatesDefault = path.resolve(__dirname, 'templates');
-    const templatesRuntime = path.resolve(__dirname, 'runtime');
+    const templatesRuntime = path.resolve(__dirname, 'runtime' + process.pid);
     // Take default templates to temporary runtime folder
     fse.copySync(templatesDefault, templatesRuntime);
 
