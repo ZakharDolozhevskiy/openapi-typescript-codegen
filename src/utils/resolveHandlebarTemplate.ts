@@ -4,5 +4,5 @@ import * as Handlebars from 'handlebars';
 
 export const resolveHandlebarTemplate = (template: string) =>
     Handlebars.compile(
-        fse.readFileSync(path.resolve(__dirname, 'runtime', template + '.hbs'), 'utf8').toString().trim()
+        fse.readFileSync(path.resolve(__dirname, 'runtime' + process.pid, template + '.hbs'), 'utf8').toString().trim()
     )
